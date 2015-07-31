@@ -1,7 +1,9 @@
+var path = require("path")
 module.exports = function() {
 };
 module.exports.pitch = function(remainingRequest) {
     this.cacheable(true);
+    this.resourcePath = remainingRequest = path.join(__dirname, "./font-awesome.config.js")
     var config = require(this.resourcePath);
   	var postStyleLoaders = '';
   	if((typeof config.postStyleLoaders !== 'undefined') && (config.postStyleLoaders.length > 0)){
